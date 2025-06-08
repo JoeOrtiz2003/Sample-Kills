@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+:root {
+    --match-graph-slogan-color: #344B13;
+    --match-graph-elim-graph-color: white;
+    --match-graph-elim-graph-background-color: #344B13;
+    --match-graph-damage-graph-background-color: #344B13;
+    --match-graph-graph-wrapper-background-color: #bb9773;
+    --match-graph-team-color: black;
+    --match-graph-team-background-color: #f0b066;
+    --match-graph-team-logo-background-color: #f0b066;
+    --match-graph-graph-number-color: white;
+}
+
+.body-class {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+body,
+#main,
+h1,
+h2,
+p,
+.teamWrapper > p,
+.displayWrapper > div > p {
+    font-family: 'Oswald', sans-serif;
+}
+
+#main {
+    display: flex;
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    opacity: 0;
+    z-index: 2;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+}
+
+#animation-layer {
+    width: 100%;
+    height: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#animation-layer > div {
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-name-wrapper {
+    display: flex;
+    position: relative;
+    height: 120px;
+    margin-top: 5%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    z-index: 10;
+}
+
+#event-name-text-1,
+#event-name-text-2 {
+    position: absolute;
+    top: 0;
+    line-height: 120px;
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+    white-space: nowrap;
+    color: transparent;
+    background: linear-gradient(to right, #FFA500, #FF4500);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.description-wrapper {
+    display: flex;
+    width: 90%;
+    flex-direction: row-reverse;
+    gap: 1%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.description-wrapper > p {
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--match-graph-elim-graph-color);
+}
+
+.description-wrapper > div {
+    width: 40px;
+    height: 40px;
+    background-color: var(--match-graph-elim-graph-background-color);
+}
+
+#damageInfo2 {
+    background-color: var(--match-graph-damage-graph-background-color);
+}
+
+#graph-wrapper {
+    display: flex;
+    width: 1800px;
+    height: 70%;
+    margin-top: 1%;
+    padding-left: 30px;
+    z-index: 11;
+    background-color: var(--match-graph-graph-wrapper-background-color);
+    overflow: hidden;
+}
+
+.killsDisplay {
+  border: 1px solid #444;
+  min-height: 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+#graph-wrapper > div {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    gap: 33px;
+    z-index: 10;
+}
+
+.teamWrapper {
+    display: flex;
+    width: 80px;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.teamWrapper > p {
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--match-graph-team-color);
+    background-color: var(--match-graph-team-background-color);
+}
+
+.tagIMG {
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    background-color: var(--match-graph-team-logo-background-color);
+}
+
+.displayWrapper {
+    display: flex;
+    width: 80px;
+    align-items: end;
+}
+
+.displayWrapper > div {
+    display: flex;
+    width: 40px;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+}
+
+.displayWrapper > div:first-child:nth-last-child(1) {
+    width: 80px;
+}
+
+.killsDisplay {
+    background-color: var(--match-graph-elim-graph-background-color);
+}
+
+.damageDisplay {
+    background-color: var(--match-graph-damage-graph-background-color);
+}
+
+.displayWrapper > div > p {
+    height: 0;
+    padding-top: 5px;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    color: var(--match-graph-graph-number-color);
+    overflow: hidden;
+}
+
+.displayWrapper > div:first-child:nth-last-child(1) > p {
+    padding-bottom: 2px;
+    transform: none;
+    writing-mode: horizontal-tb;
+}
+
+*,
+::before,
+::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}

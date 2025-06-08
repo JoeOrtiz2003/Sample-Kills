@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Graph</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="body-class">
+    <div id="sheet-dropdown-wrapper" style="position: absolute; top: 30px; left: 30px; z-index: 100;">
+        <select id="sheetDropdown" style="font-family: 'Oswald', sans-serif; font-size: 20px;">
+            <!-- Options will be filled by JS -->
+        </select>
+    </div>
+    <div id="main">
+        <div id="animation-layer">
+            <div>
+                <div class="description-wrapper">
+                    <p id="damageInfo1">Elims</p>
+                    <div id="damageInfo2"></div>
+                </div>
+                <div id="graph-wrapper">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
