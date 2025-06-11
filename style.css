@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 :root {
-    --match-graph-slogan-color: #344B13;
     --match-graph-elim-graph-color: white;
-    --match-graph-elim-graph-background-color: #344B13;
-    --match-graph-damage-graph-background-color: #344B13;
-    --match-graph-graph-wrapper-background-color: #bb9773;
-    --match-graph-team-color: black;
-    --match-graph-team-background-color: #f0b066;
-    --match-graph-team-logo-background-color: #f0b066;
+    --match-graph-elim-graph-background-color: #737373;
+    --match-graph-damage-graph-background-color: #8b8989;
+    --match-graph-graph-wrapper-background-color: #484848;
+    --match-graph-team-color: white;
+    --match-graph-team-background-color: #5f5c5c;
+    --match-graph-team-logo-background-color: #8b8989;
     --match-graph-graph-number-color: white;
 }
 
@@ -105,7 +104,7 @@ p,
 .description-wrapper > div {
     width: 40px;
     height: 40px;
-    background-color: var(--match-graph-elim-graph-background-color);
+    background-color: var(--match-graph-damage-graph-background-color);
 }
 
 #damageInfo2 {
@@ -130,7 +129,6 @@ p,
   align-items: flex-end;
   justify-content: center;
 }
-
 
 #graph-wrapper > div {
     display: flex;
@@ -194,9 +192,9 @@ p,
 }
 
 .displayWrapper > div > p {
-    height: 0;
+    /*height: 0;*/
     padding-top: 5px;
-    line-height: 30px;
+    line-height: 50px;
     font-size: 30px;
     font-weight: 700;
     writing-mode: tb-rl;

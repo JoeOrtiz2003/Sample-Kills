@@ -177,23 +177,30 @@ function updateData() {
 
 // Initialize the app
 document.addEventListener("DOMContentLoaded", () => {
-    // Populate dropdown
-    const dropdown = document.getElementById("sheetDropdown");
-    for (let i = 1; i <= 15; i++) {
-        const opt = document.createElement("option");
-        opt.value = `Game ${i}`;
-        opt.textContent = `Game ${i}`;
-        dropdown.appendChild(opt);
-    }
-    dropdown.value = sheetName;
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
 
-    dropdown.addEventListener("change", (e) => {
-        sheetName = e.target.value;
-        runTemplateUpdate();
+    // Toggle the dropdown visibility on button click
+    dropdownButton.addEventListener("click", () => {
+        dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
     });
 
-    runTemplateUpdate();
+    // Populate dropdown menu with game options
+    for (let i = 1; i <= 15; i++) {
+        const opt = document.createElement("div");
+        opt.textContent = `Game ${i}`;
+        opt.classList.add("dropdown-item");
+        opt.addEventListener("click", () => {
+            sheetName = `Game ${i}`;
+            console.log('Dropdown changed to: ', sheetName);
+            runTemplateUpdate(); // Update data based on selected game
+            dropdownMenu.style.display = "none"; // Hide menu after selection
+        });
+        dropdownMenu.appendChild(opt);
+    }
+
+    runTemplateUpdate(); // Initial update
     setInterval(() => {
-        runTemplateUpdate();
+        runTemplateUpdate(); // Auto update data at set intervals
     }, AUTO_FETCH_INTERVAL);
 });
